@@ -53,7 +53,24 @@ return
 #^!Numpad7::
 return
 
+#^!Numpad8::
+return
+
+
 ;=================== KEYBOARD ================
+; Generic Buttons on most keyboards that no one uses 
+
+CapsLock::
+return
+
+PrintScreen::
+return
+
+Pause::
+return
+
+
+
 
 ;================ REFERENCE LIST ================
 
@@ -164,3 +181,16 @@ return
 ; ^ Control 
 ; + Shift 
 ; & An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey. See below for details. Such hotkeys are ignored (not activated) on Windows 95/98/Me. 
+
+; Double Click
+; if (A_PriorHotkey <> "BUTTON" or A_TimeSincePriorHotkey > 300)
+; {
+;     ; Too much time between presses, so this isn't a double-press.
+;     KeyWait, BUTTON
+; 	Send {BUTTON}
+;     return
+; }
+; Send {OTHERBUTTON}
+
+; Application Specific
+; #IfWinActive ahk_class APPLICATION_NAME
