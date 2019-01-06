@@ -31,3 +31,113 @@ return
 ;=================== MOUSE ================
 
 ;=================== KEYBOARD ================
+
+;================ REFERENCE LIST ================
+
+; LButton
+; RButton
+; MButton
+
+; WheelDown
+; WheelUp
+; WheelLeft and WheelRight
+
+; XButton1 - a button that appears only on certain mice 
+; XButton2 - a button that appears only on certain mice
+
+; Space
+; Tab
+; Enter (or Return)
+; Escape (or Esc)
+; Backspace (or BS)
+
+; Delete (or Del)
+; Insert (or Ins)
+; Home
+; End
+; PgUp
+; PgDn
+; Up
+; Down
+; Left
+; Right
+
+; ScrollLock
+; CapsLock
+; NumLock
+
+; Numlock ON OFF 
+; Numpad0 NumpadIns 
+; Numpad1 NumpadEnd 
+; Numpad2 NumpadDown 
+; Numpad3 NumpadPgDn 
+; Numpad4 NumpadLeft 
+; Numpad5 NumpadClear 
+; Numpad6 NumpadRight 
+; Numpad7 NumpadHome 
+; Numpad8 NumpadUp 
+; Numpad9 NumpadPgUp 
+; NumpadDot (.)  NumpadDel 
+; NumpadDiv (/) NumpadDiv (/) 
+; NumpadMult (*) NumpadMult (*) 
+; NumpadAdd (+) NumpadAdd (+) 
+; NumpadSub (-) NumpadSub (-) 
+; NumpadEnter NumpadEnter 
+
+; F1 through F24
+
+; AppsKey
+
+; LWin
+; RWin
+; Control (or Ctrl)
+; Alt
+; Shift
+
+; LControl (or LCtrl)
+; RControl (or RCtrl)
+; LShift
+; RShift
+; LAlt
+; RAlt - Note: If your keyboard layout has AltGr instead of RAlt, you can probably use it as a hotkey prefix via <^>! as described here. In addition, "LControl & RAlt::" would make AltGr itself into a hotkey.
+
+; PrintScreen
+; CtrlBreak
+; Pause
+; Break -- Since this is synonymous with Pause, use ^CtrlBreak in hotkeys instead of ^Pause or ^Break.
+
+; Help
+; Sleep
+
+; Browser_Back
+; Browser_Forward
+; Browser_Refresh
+; Browser_Stop
+; Browser_Search
+; Browser_Favorites
+; Browser_Home
+; Volume_Mute
+; Volume_Down
+; Volume_Up
+; Media_Next
+; Media_Prev
+; Media_Stop
+; Media_Play_Pause
+; Launch_Mail
+; Launch_Media
+; Launch_App1
+; Launch_App2
+
+; SCnnn (where nnn is the scan code of a key) - Recognizes unusual keys not mentioned above. See Special Keys for details.
+
+; VKnn (where nn is the hexadecimal virtual key code of a key) - This rarely-used method also prevents certain types of hotkeys from requiring the keyboard hook. For example, the following hotkey does not use the keyboard hook, but as a side-effect it is triggered by pressing either Home or NumpadHome: ^VK24::MsgBox You pressed Home or NumpadHome while holding down Control.
+; Known limitation: VK hotkeys that are forced to use the keyboard hook, such as *VK24 or ~VK24, will fire for only one of the keys, not both (e.g. NumpadHome but not Home).
+; For more information about the VKnn method, see Special Keys.
+
+
+; Symbol Description 
+; # Win (Windows logo key). In v1.0.48.01+, for Windows Vista and later, hotkeys that include the Windows key (e.g. #a) will wait for the Windows key to be released before sending any text containing an "L" keystroke. This prevents the Send within such a hotkey from locking the PC. This behavior applies to all sending modes except SendPlay (which doesn't need it) and blind mode. 
+; ! Alt 
+; ^ Control 
+; + Shift 
+; & An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey. See below for details. Such hotkeys are ignored (not activated) on Windows 95/98/Me. 
