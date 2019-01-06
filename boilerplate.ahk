@@ -193,4 +193,5 @@ return
 ; Send {OTHERBUTTON}
 
 ; Application Specific
+; Everything below this line would only apply to the specific application
 ; #IfWinActive ahk_class APPLICATION_NAME
