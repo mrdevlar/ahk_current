@@ -29,6 +29,29 @@ return
 
 
 ;=================== MOUSE ================
+; G602 with side buttons
+; each button is set to ctrl+alt+win+NumpadN
+
+#^!Numpad1::
+return
+
+#^!Numpad2::
+return
+
+#^!Numpad3::
+return
+
+#^!Numpad4::
+return
+
+#^!Numpad5::
+return
+
+#^!Numpad6::
+return
+
+#^!Numpad7::
+return
 
 ;=================== KEYBOARD ================
 
