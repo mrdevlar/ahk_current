@@ -45,11 +45,11 @@ return
 return
 
 #^!Numpad4::
-    SendInput, +#{Left}
+    reload ;Debug
 return
 
 #^!Numpad5::
-    reload ;Debug
+    SendInput, +#{Left}
 return
 
 #^!Numpad6::
@@ -81,20 +81,12 @@ MButton::
     SendInput, {Space}
 return
 
-#^!Numpad5::
-    SendInput, {[}
-return
-
-#^!Numpad6::
-    SendInput, {]}
-return
-
-#^!Numpad7::
-    SendInput, !{Left}
-return
-
-#^!Numpad8::
+#^!Numpad2::
     SendInput, !{Right}
+return
+
+#^!Numpad3::
+    SendInput, !{Left}
 return
 
 
