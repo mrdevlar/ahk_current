@@ -30,7 +30,7 @@ return
 
 ;=================== MOUSE ================
 ; G602 with side buttons
-; each button is set to ctrl+alt+win+NumpadN
+; each button is set to ctrl+alt+win+NumpadN from 1-8
 
 #^!Numpad1::
     SendInput, ^w
@@ -45,10 +45,11 @@ return
 return
 
 #^!Numpad4::
+    SendInput, +#{Left}
 return
 
 #^!Numpad5::
-    SendInput, ^!+#2 ;Debug
+    reload ;Debug
 return
 
 #^!Numpad6::
@@ -74,16 +75,37 @@ Pause::
 return
 
 
+#IfWinActive VLC media player
 
-;=================== CHROME ================
-#IfWinActive Google Chrome
+MButton::
+    SendInput, {Space}
+return
+
+#^!Numpad5::
+    SendInput, {[}
+return
+
+#^!Numpad6::
+    SendInput, {]}
+return
 
 #^!Numpad7::
-    SendInput, ^{Tab}
+    SendInput, !{Left}
 return
 
 #^!Numpad8::
+    SendInput, !{Right}
+return
+
+
+#IfWinActive Google Chrome
+
+#^!Numpad7::
     SendInput, ^+{Tab}
+return
+
+#^!Numpad8::
+    SendInput, ^{Tab}
 return
 
 ; ~MButton::
@@ -96,6 +118,16 @@ return
 ; }
 ; Send ^w
 ; return
+
+#IfWinActive Overwatch
+
+#^!Numpad2::
+    SendInput, v
+return
+
+#^!Numpad5::
+    SendInput, v
+return
 
 ;================ REFERENCE LIST ================
 
